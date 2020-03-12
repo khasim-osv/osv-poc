@@ -1,0 +1,23 @@
+@primaryColor: rgb(230, 220, 220);
+@headerHeight: 50px;
+header {
+    background-color: @primaryColor;
+    width: 100%;
+    height: @headerHeight;
+    text-align: center;
+    line-height: @headerHeight;
+}
+
+footer {
+    &:extend(header);
+    position: absolute;
+    bottom: 0;
+}
+
+.container {
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - (112px));
+    overflow-y: auto;
+}

@@ -1,0 +1,9 @@
+<div>
+    <p>home works!</p>
+    <div>Name is: {{txtName}}</div>
+    <input type="text" [(ngModel)]="txtName" />
+    <app-child (childToParent)="showDataFromChild($event)" parentToChild="{{'child content from parent'}}"></app-child>
+    <p>{{childSentData}}</p>
+    <button (click)="updateMsg('new text')">update service text</button>
+    <p *ngFor="let item of jsonn">{{item.id}}</p>
+</div>
